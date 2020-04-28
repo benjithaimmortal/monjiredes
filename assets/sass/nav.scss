@@ -1,0 +1,95 @@
+
+
+.navbar-site-emblem {
+  margin-right: auto;
+  font-family: Arial, sans-serif;
+  // font-weight: 400;
+  a:link a:visited {
+    color: $nav-link-color;
+  }
+  .fa.fa-behance-square.fa-lg { color: $nav-logo-color; }
+}
+
+.dropdown {
+  display: none;
+}
+
+/* device header drop-down menu */
+@media (max-width: 800px) {
+  .nav-links {
+    display: none;
+  }
+
+  .navbar-site-emblem {
+    font-size: 20px;
+    padding: 22px 1rem;
+  }
+  .dropdown {
+    display: flex;
+    justify-content: flex-end;
+    background-color: none;
+    border-radius: 10px;
+    font-size: 25px;
+    padding: 25px 25px;
+    .dropdown-btn {
+      z-index: 99;
+      position: relative;
+      height: 30px;
+      width:  30px;
+      span {
+        position: absolute;
+        height: 2px;
+        width: 30px;
+        background-color: $nav-text-color;
+        transition: ease all .2s;
+        &:first-of-type { top: 20%; }
+        &:nth-child(2)  { top: 50%; }
+        &:last-of-type  { top: 80%; }
+      }
+    }
+  }
+  .invisicheck:checked + .dropdown-btn {
+    margin-right: 10px;
+    span {
+      top: 50%;
+      height: 4px;
+      transition: ease all .5s;
+      &:first-of-type { transform: rotate(45deg); }
+      &:nth-child(2)  { transform: rotate(-135deg); }
+      &:last-of-type  { transform: rotate(-45deg); }
+    }
+  }
+  .dropdown-nav {
+    color: $nav-text-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0; left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 98;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: ease all .5s;
+    transform-origin: center top;
+    right: 0;
+    font-size: 1.1rem;
+    // border-left: solid 1px $nav-text-color;
+    background-color: $cyan;
+  }
+  .invisicheck:checked + .dropdown-btn + .dropdown-nav {
+    max-height: 100%;
+    opacity: 1;
+    transition: ease max-height .3s;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    a { color: $white; }
+  }
+  .drop-btn {
+    // right: 10;
+    // padding: 10px 20px;
+  }
+}

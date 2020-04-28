@@ -1,0 +1,188 @@
+.portfolio {
+  // background: $dark-bg-blue;
+  // padding-top: 100px;
+  padding-bottom: 3rem;
+  color: $dark-bg-blue;
+  h1 {
+    text-align: center;
+  }
+	a {
+    color: $p-color !important;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  .project-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .project {
+    margin: 2rem 0.5rem;
+    padding: 4rem 4rem 1rem;
+    height: 300px;
+    width: 250px;
+    transition: ease all 0.7s;
+    &:hover {
+      transition: ease all .2s;
+      h2, h6, p, .split {
+        display: none;
+      }
+    }
+    .project-name {
+      letter-spacing: 5px;
+    }
+    .split {
+      margin: 20px 0;
+      border-bottom: solid 1.5px;
+      max-width: 50px;
+    }
+    p {
+      font-weight: 300;
+      padding-bottom: 10px;
+    }
+    h6 {
+      letter-spacing: 3px;
+    }
+  }
+
+  //systema
+  .p1 {
+    background: $light-cyan;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    &:hover {
+      background: url("/assets/images/portfolio/systema-dev.png");
+      background-size: cover;
+    }
+  }
+
+  //squashable
+  .p2 {
+    background: $light-yellow;
+    border-radius: 42% 58% 29% 71% / 69% 70% 30% 31%;
+    &:hover {
+      background: url("/assets/images/portfolio/Squash-Ranker.jpg");
+      background-size: cover;
+	  }
+  }
+
+  //slice
+  .p3 {
+    background: $light-green;
+    border-radius: 35% 65% 30% 70% / 40% 60% 40% 60%;
+    &:hover {
+      background: url("/assets/images/portfolio/slice.png");
+      background-size: cover;
+	  }
+  }
+
+  
+  //popup blocks
+  .p11 {
+    background: $light-red;
+    border-radius: 42% 58% 29% 71% / 69% 70% 30% 31%;
+    &:hover {
+      background: url("/assets/images/portfolio/Pop-up\ Blocks.png");
+      background-size: cover;
+    }
+  }
+
+  //steel house
+  .p4 {
+    background: $light-cyan;
+    border-radius: 10% 90% 71% 29% / 12% 83% 17% 88%;
+    &:hover {
+      background: url("/assets/images/portfolio/studio.png");
+      background-size: cover;
+	  }
+  }
+
+  //gwangju
+  .p5 {
+    background: $light-yellow;
+    border-radius: 70% 30% 30% 70% / 40% 60% 40% 60%;
+    &:hover {
+      background: url("/assets/images/portfolio/gwangju.png");
+      background-size: cover;
+	  }
+  }
+
+  //auth
+  .p6 {
+    background: $light-green;
+    border-radius: 78% 22% 65% 35% / 25% 20% 80% 75%;
+    &:hover {
+      background: url("/assets/images/portfolio/Rails\ Sample\ App\ 2.jpg");
+      background-size: cover;
+	  }
+  }
+
+  //myeongye & snake.dev
+  .p7 {
+    background: $light-red;
+    border-radius: 78% 22% 65% 35% / 25% 20% 80% 75%;
+  }
+  .snake:hover {
+    background: url("/assets/images/portfolio/snakedev1.png");
+    background-size: cover;
+  }
+  .myeongye:hover {
+    background: url("/assets/images/portfolio/Honorary-Citizenship.jpg");
+    background-size: cover;
+  }
+
+  //seoulite
+  .p8 {
+    background: $light-cyan;
+    border-radius: 35% 65% 30% 70% / 40% 60% 40% 60%;
+    &:hover {
+      background: url("/assets/images/portfolio/Munhwa.jpg");
+      background-size: cover;
+	  }
+  }
+
+  //mobeum
+  .p9 {
+    background: $light-yellow;
+    border-radius: 42% 58% 29% 71% / 69% 70% 30% 31%;
+    &:hover {
+      background: url("/assets/images/portfolio/Mobeum-Weigukin.jpg");
+      background-size: cover;
+	  }
+  }
+
+  //AJAX & developer
+  .p10 {
+    background-color: $light-green;
+    border-radius: 10% 90% 71% 29% / 12% 83% 17% 88%;
+  }
+  .ajax:hover {
+    background: url("/assets/images/portfolio/AJAX.png");
+    background-size: cover;
+  }
+  .developer:hover {
+    background: url("/assets/images/portfolio/Boat-Race.jpg");
+    background-size: cover;
+  }
+
+  // p {
+  //   margin-bottom: 0;
+  // }
+}  
+
+
+
+@media (max-width: 800px) {
+  .contact {
+    .text-left {
+      margin-left: auto;
+      font-size: 14px;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .portfolio h2 { font-size: 1.2em; }
+  .portfolio .project:first-of-type { padding: 2rem 5rem 1rem 3rem; }
+}
