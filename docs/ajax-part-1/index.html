@@ -1,0 +1,215 @@
+<!doctype html>
+<html>
+  <head>
+    
+    <meta charset="utf-8">
+
+
+    <!-- favicons -->
+    <link rel="apple-touch-icon"      sizes="57x57"   href="/monjiredes/assets/images/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon"      sizes="60x60"   href="/monjiredes/assets/images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon"      sizes="72x72"   href="/monjiredes/assets/images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon"      sizes="76x76"   href="/monjiredes/assets/images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon"      sizes="114x114" href="/monjiredes/assets/images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon"      sizes="120x120" href="/monjiredes/assets/images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon"      sizes="144x144" href="/monjiredes/assets/images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon"      sizes="152x152" href="/monjiredes/assets/images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon"      sizes="180x180" href="/monjiredes/assets/images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/monjiredes/assets/images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32"   href="/monjiredes/assets/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96"   href="/monjiredes/assets/images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16"   href="/monjiredes/assets/images/favicon/favicon-16x16.png">
+    <link rel="manifest"                              href="/monjiredes/assets/images/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/monjiredes/assets/images/favicon/ms-icon-144x144.png">
+    <meta name="theme-color"             content="#ffffff">
+
+    <!-- facebook meta -->
+    <meta property=”og:url”              content="https://www.monjibram.com/" />
+    <meta property="og:type"             content="website" />
+    <meta property="og:description"      content="Benji makes your website better. See more!" />
+    <meta property="og:image"            content="/monjiredes/assets/images/Award.jpg" />
+    <meta property="og:image:type"       content="image/jpeg" />
+    <meta property="og:image:alt"        content="Benjamin Kostenbader" />
+
+    <!-- seo meta -->
+    <meta name="description"             content="Benjamin Kostenbader is the award-winning co-developer of the Seongdong Global Experience Centers in Seoul, South Korea. He is also a proud father, software developer, cyclist, and squash enthusiast.">
+    <!-- <link rel="canonical" href="https://www.monjibram.com/" /> -->
+
+    <title>AJAX from the Beginning</title>
+
+    <link rel="stylesheet" href="/monjiredes/assets/css/style.css">
+    
+    <!-- force mobile to use mobile viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <section class="main-grid">
+      <nav>
+
+  <a href="/monjiredes/index.html" class="navbar-site-emblem">
+    <i class="fa fa-behance-square fa-lg"></i>nji
+  </a>
+  <!-- If PC/Large Resolution -->
+  <div class="big-nav">
+    <div class="nav-links"><a href="/monjiredes/blog/">     Blog</a></div>
+    <div class="nav-links"><a href="/monjiredes/portfolio/">Portfolio</a></div>
+    <div class="nav-links"><a href="/monjiredes/resume/">   Resume</a></div>
+    <div class="nav-links"><a href="/monjiredes/contact/">  Contact</a></div>
+  </div>
+  
+</nav>
+
+
+
+  <!-- If Mobile/Tablet -->
+  <label class="dropdown">
+    <input type="checkbox" class="invisicheck" name="" id="pagestopper" style="display: none;">
+    <div class="dropdown-btn" id="">
+      <span></span><span></span><span></span>
+    </div>
+    <ul class="dropdown-nav">
+      <!-- <div class="fa fa-align-justify fa-lg dropdown-nav"></div> -->
+      <!-- <li class="drop-btn"><a href="/monjiredes/">    Home</a></li> -->
+      <li class="drop-btn"><a href="/monjiredes/blog/">    Blog</a></li>
+      <li class="drop-btn"><a href="/monjiredes/portfolio/">Portfolio</a></li>
+      <li class="drop-btn"><a href="/monjiredes/resume/">      Resume</a></li>
+      <li class="drop-btn"><a href="/monjiredes/contact/">    Contact</a></li>
+    </ul>
+  </label>
+      <div class="inner">
+        <div class="blog-post">
+  <article class="article">
+    <div class='blog-info'>
+      <div class='demos'>
+        
+        
+          <div class="cat" href="/monjiredesblog/categories/#Tutorials">Tutorials</div>
+          
+        
+        <div class='datetime'>17 May 2020</div>
+      </div>
+      <h1 class='title'>AJAX from the Beginning</h1>
+      
+        <div class='auth'>By Benji</div>
+      
+    </div>
+    <section class='content'>
+      <p>I’m going to let you in on a secret superpower I have. With a small string of text, I can download any website in the world. OK, so maybe it’s not very super. It’s called an HTTP request and your browser does this all the time. But what if you could do it <em>yourself</em>? We call that AJAX.</p>
+
+<blockquote>
+  <p><strong>Disclaimer!</strong> <em>This article assumes a basic knowledge of HTTP REST structure. If you know what GET and POST mean, read on! Otherwise, I highly recommend going straight to the <a href="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods">Wikipedia source</a>.</em></p>
+</blockquote>
+
+<p>AJAX stands for <strong>A</strong>synchronous <strong>J</strong>avaScript <strong>a</strong>nd <strong>X</strong>ML. It was developed to call and return XML strings from a server. But it’s been widely adopted as a solution for getting things from other pages, or doing the things that your browser does independently of the standards to which it adheres.</p>
+
+<p>For example, let’s say we want to send a form. With HTML’s <code class="highlighter-rouge">&lt;form&gt;</code> element, I can tell the browser to send information via POST or GET request types through a very predictable and typical process:</p>
+<ol>
+  <li>Gather the form fields.</li>
+  <li>Do the HTTP request.</li>
+  <li>Reload the page.</li>
+</ol>
+
+<p>But what if I don’t want to reload? Reloading on form submission is a terrible UX. Modern web design will <em>never</em> reload on form submission. Instead, we use AJAX.</p>
+
+<p><em>[This next bit is going to use jQuery, and I’ll explain why in a moment. Credit: <a href="https://scotch.io/tutorials/submitting-ajax-forms-with-jquery">scotch.io</a>]</em></p>
+
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+</pre></td><td class="code"><pre><span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#form</span><span class="dl">'</span><span class="p">).</span><span class="nx">submit</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">){</span>
+  <span class="c1">// stop the form from submitting and refreshing by preventing the default browser behavior</span>
+  <span class="nx">event</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
+  
+  <span class="c1">// gather and validate data fields from the form, typically storing the result as JSON</span>
+  <span class="kd">var</span> <span class="nx">formData</span> <span class="o">=</span> <span class="nx">formJSON</span><span class="p">;</span>
+
+  <span class="c1">// AJAX, the jQuery way</span>
+  <span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
+      <span class="na">type</span>        <span class="p">:</span> <span class="dl">'</span><span class="s1">POST</span><span class="dl">'</span><span class="p">,</span> <span class="c1">// define the type of HTTP verb we want to use (POST for our form)</span>
+      <span class="na">url</span>         <span class="p">:</span> <span class="dl">'</span><span class="s1">process.php</span><span class="dl">'</span><span class="p">,</span> <span class="c1">// the url where we want to POST</span>
+      <span class="na">data</span>        <span class="p">:</span> <span class="nx">formData</span><span class="p">,</span> <span class="c1">// our data object</span>
+      <span class="na">dataType</span>    <span class="p">:</span> <span class="dl">'</span><span class="s1">json</span><span class="dl">'</span><span class="p">,</span> <span class="c1">// what type of data do we expect back from the server</span>
+      <span class="na">encode</span>      <span class="p">:</span> <span class="kc">true</span>
+  <span class="p">})</span>
+    <span class="c1">// using something called a Promise, we can wait for the servers to respond, then use the results when they come</span>
+    <span class="p">.</span><span class="nx">done</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+
+        <span class="c1">// log data to the console so we can see the result and confirm no errors</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span> 
+    <span class="p">});</span>
+<span class="p">});</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+    </section>
+  </article>
+  <div class='hero' style="background-image: url(/monjiredes/assets/images/ajax-bottle.jpg)"></div>
+</div>
+      </div>
+    </section>
+    <div class="footer-white-bg">
+  <div class="main-footer">
+    <div class="cont">
+      <div class="b footer-child">
+        <h3>BENJI</h3>
+        <p><a href="/monjiredes/blog/">        blog</a></p>
+        <p><a href="/monjiredes/resume/">        resume</a></p>
+        <p><a href="/monjiredes/portfolio/#news"> news</a></p>
+      </div>
+      <div class="c footer-child">
+        <h3>CODE</h3>
+        <p><a href="/monjiredes/portfolio/#code">                     portfolio</a></p>
+        <p><a href="http://github.com/benjithaimmortal">  github</a></p>
+        <p><a href="http://codepen.io/benjithaimmortal">  codepen</a></p>
+      </div>
+      <div class="p footer-child">
+        <h3>PHOTOGRAPHY</h3>
+        <!-- <p><a href="{/% link photos.html %}"> portfolio</a></p> -->
+        <p><a href="/monjiredes/contact/">contact</a></p>
+      </div>
+      <div class="l footer-child">
+        <h3>LICENSE</h3>
+        <p>all rights reserved</p>
+        <p>copyright &copy;	2020</p>
+        <p>Benjamin Kostenbader</p>
+      </div>
+    </div>
+  </div>
+</div>
+<footer class="footer">
+  made with love by Benji &hearts;
+</footer>
+  </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", function(){
+      var stopper = document.getElementById("pagestopper")
+      stopper.addEventListener("change", function(){
+        if (stopper.checked) {
+          document.body.classList.add("locked");
+        } else {
+          document.body.classList.remove("locked");
+        }
+        // console.log("this did something");
+      });
+    });
+  </script>
+</html>
