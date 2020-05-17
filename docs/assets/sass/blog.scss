@@ -120,12 +120,14 @@ highlighter
 
 .highlight {
   font-family: mono;
+  font-size: 14px;
+  letter-spacing: -0.4px;
   padding: 10px 20px;
   margin-right: 20px;
   background-color: #ececec;
-
   overflow: auto;
   border-left: solid 4px $light-cyan;
+  width: 110%;
 }
 .highlight .hll { background-color: #ffffcc }
 .highlight .c { color: #aaaaaa; font-style: italic } /* Comment */
