@@ -23,6 +23,8 @@ destination: docs/
 host: localhost
 livereload: true
 
+permalink: blog/:slug
+
 sass:
   sass_dir: assets/sass
   style: compressed

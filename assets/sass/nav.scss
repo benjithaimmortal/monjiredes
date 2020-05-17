@@ -1,4 +1,6 @@
-
+.big-nav {
+  padding-top: 15px;
+}
 
 .navbar-site-emblem {
   margin-right: auto;
@@ -8,6 +10,7 @@
     color: $nav-link-color;
   }
   .fa.fa-behance-square.fa-lg { color: $nav-logo-color; }
+  margin-bottom: 5px;
 }
 
 .dropdown {

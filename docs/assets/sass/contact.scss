@@ -55,6 +55,7 @@
   padding-bottom: 30px;
   margin-left: -150px;
   margin-right: -150px;
+  margin-bottom: -40px; // unless you have a footer here
 }
 .header-indent {
   cursor: pointer;
@@ -78,6 +79,13 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  input, textarea, button {
+    font-size: 16px;
+    font-family: $font-fam;
+    // &::placeholder {
+    //   font-size: 16px;
+    // }
+  }
 }
 
 

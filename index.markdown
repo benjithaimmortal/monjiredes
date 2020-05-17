@@ -8,4 +8,6 @@ layout: base
 
 # Hi. I'm Benji.
 
-Don't worry, eventually this will be full of fun things to do. But right now it's for you.
+I'm a front-end developer at [**Top Hat**](https://builtbytophat.com), Pittsburgh's award-winning, boutique marketing firm. I'm a developer, public speaker, touring cyclist, squash captain, and father. When I'm not running away from Internet Explorer support requests, I keep busy making beautiful things on computers. I am inspired by my faith, and the fact that every challenge I encounter [on modern web browsers] is fun to overcome.
+
+This site, like so many of my passions, is working its way toward something bigger and better. Check back soon!
