@@ -66,7 +66,12 @@
       border-left: solid 4px $light-yellow;
       margin-bottom: 28px;
       padding: 10px 20px;
-      p { padding-bottom: 0; }
+      p {
+        font-family: $font-fam;
+        font-weight: 500;
+        font-size: 24px;
+        padding-bottom: 0;
+      }
     }
   }
 }

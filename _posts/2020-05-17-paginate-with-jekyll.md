@@ -1,11 +1,11 @@
 ---
 title: "How I Paginated this Blog"
-date: 2020/05/17 12:06:00 Z
+date: 2020/05/17 12:07:00 Z
 categories:
 - Tutorials
 layout: post
 author: Benji
-# hero: ajax-bottle.jpg
+hero: pages.jpg
 ---
 
 I used `paginate: 5` and 
