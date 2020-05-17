@@ -23,11 +23,18 @@
     padding: 4rem 4rem 1rem;
     height: 300px;
     width: 250px;
-    transition: ease all 0.7s;
+    transition: ease opacity 0.7s;
+    background-size: cover;
+    position: relative;
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+    }
     &:hover {
-      transition: ease all .2s;
+      transition: ease opacity .2s;
       h2, h6, p, .split {
-        display: none;
+        opacity: 0;
       }
     }
     .project-name {
@@ -37,13 +44,17 @@
       margin: 20px 0;
       border-bottom: solid 1.5px;
       max-width: 50px;
+      opacity: 1;
     }
     p {
       font-weight: 300;
       padding-bottom: 10px;
+      opacity: 1;
     }
+    h2 { opacity: 1; }
     h6 {
       letter-spacing: 3px;
+      opacity: 1;
     }
   }
 
@@ -52,7 +63,7 @@
     background: $light-cyan;
     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
     &:hover {
-      background: url("/assets/images/portfolio/systema-dev.png");
+      background: url("../images/portfolio/systema-dev.png");
       background-size: cover;
     }
   }
@@ -62,7 +73,7 @@
     background: $light-yellow;
     border-radius: 42% 58% 29% 71% / 69% 70% 30% 31%;
     &:hover {
-      background: url("/assets/images/portfolio/Squash-Ranker.jpg");
+      background: url("../images/portfolio/Squash-Ranker.jpg");
       background-size: cover;
 	  }
   }
@@ -70,10 +81,10 @@
   //slice
   .p3 {
     background: $light-green;
+    background-size: cover;
     border-radius: 35% 65% 30% 70% / 40% 60% 40% 60%;
     &:hover {
-      background: url("/assets/images/portfolio/slice.png");
-      background-size: cover;
+      background: url("../images/portfolio/slice.png");
 	  }
   }
 
@@ -83,7 +94,7 @@
     background: $light-red;
     border-radius: 42% 58% 29% 71% / 69% 70% 30% 31%;
     &:hover {
-      background: url("/assets/images/portfolio/Pop-up\ Blocks.png");
+      background: url("../images/portfolio/Pop-up\ Blocks.png");
       background-size: cover;
     }
   }
@@ -93,7 +104,7 @@
     background: $light-cyan;
     border-radius: 10% 90% 71% 29% / 12% 83% 17% 88%;
     &:hover {
-      background: url("/assets/images/portfolio/studio.png");
+      background: url("../images/portfolio/studio.png");
       background-size: cover;
 	  }
   }
@@ -103,7 +114,7 @@
     background: $light-yellow;
     border-radius: 70% 30% 30% 70% / 40% 60% 40% 60%;
     &:hover {
-      background: url("/assets/images/portfolio/gwangju.png");
+      background: url("../images/portfolio/gwangju.png");
       background-size: cover;
 	  }
   }
@@ -113,7 +124,7 @@
     background: $light-green;
     border-radius: 78% 22% 65% 35% / 25% 20% 80% 75%;
     &:hover {
-      background: url("/assets/images/portfolio/Rails\ Sample\ App\ 2.jpg");
+      background: url("../images/portfolio/Rails\ Sample\ App\ 2.jpg");
       background-size: cover;
 	  }
   }
@@ -124,11 +135,11 @@
     border-radius: 78% 22% 65% 35% / 25% 20% 80% 75%;
   }
   .snake:hover {
-    background: url("/assets/images/portfolio/snakedev1.png");
+    background: url("../images/portfolio/snakedev1.png");
     background-size: cover;
   }
   .myeongye:hover {
-    background: url("/assets/images/portfolio/Honorary-Citizenship.jpg");
+    background: url("../images/portfolio/Honorary-Citizenship.jpg");
     background-size: cover;
   }
 
@@ -137,7 +148,7 @@
     background: $light-cyan;
     border-radius: 35% 65% 30% 70% / 40% 60% 40% 60%;
     &:hover {
-      background: url("/assets/images/portfolio/Munhwa.jpg");
+      background: url("../images/portfolio/Munhwa.jpg");
       background-size: cover;
 	  }
   }
@@ -147,7 +158,7 @@
     background: $light-yellow;
     border-radius: 42% 58% 29% 71% / 69% 70% 30% 31%;
     &:hover {
-      background: url("/assets/images/portfolio/Mobeum-Weigukin.jpg");
+      background: url("../images/portfolio/Mobeum-Weigukin.jpg");
       background-size: cover;
 	  }
   }
@@ -158,11 +169,11 @@
     border-radius: 10% 90% 71% 29% / 12% 83% 17% 88%;
   }
   .ajax:hover {
-    background: url("/assets/images/portfolio/AJAX.png");
+    background: url("../images/portfolio/AJAX.png");
     background-size: cover;
   }
   .developer:hover {
-    background: url("/assets/images/portfolio/Boat-Race.jpg");
+    background: url("../images/portfolio/Boat-Race.jpg");
     background-size: cover;
   }
 

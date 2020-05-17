@@ -23,7 +23,9 @@ destination: docs/
 host: localhost
 livereload: true
 
-permalink: blog/:slug
+# permalink: blog/:slug
+# paginate: 5
+# paginate_path: "blog/:num"
 
 sass:
   sass_dir: assets/sass
@@ -42,6 +44,7 @@ github_username:  benjithaimmortal
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-paginate
 
 # Exclude from processing.
 # The following items will not be processed, by default.

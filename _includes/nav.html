@@ -1,14 +1,14 @@
 <nav>
 
-  <a href="/index.html" class="navbar-site-emblem">
+  <a href="{{ site.baseurl }}/index.html" class="navbar-site-emblem">
     <i class="fa fa-behance-square fa-lg"></i>nji
   </a>
   <!-- If PC/Large Resolution -->
   <div class="big-nav">
-    <div class="nav-links"><a href="/blog">Blog</a></div>
-    <div class="nav-links"><a href="/portfolio">Portfolio</a></div>
-    <div class="nav-links"><a href="/resume">   Resume</a></div>
-    <div class="nav-links"><a href="/contact">  Contact</a></div>
+    <div class="nav-links"><a href="{% link blog.html %}">     Blog</a></div>
+    <div class="nav-links"><a href="{% link portfolio.html %}">Portfolio</a></div>
+    <div class="nav-links"><a href="{% link resume.html %}">   Resume</a></div>
+    <div class="nav-links"><a href="{% link contact.html %}">  Contact</a></div>
   </div>
   
 </nav>
@@ -23,11 +23,10 @@
     </div>
     <ul class="dropdown-nav">
       <!-- <div class="fa fa-align-justify fa-lg dropdown-nav"></div> -->
-      <!-- <li class="drop-btn"><a href="/index">    Home</a></li> -->
-      <li class="drop-btn"><a href="/blog">    Blog</a></li>
-      <li class="drop-btn"><a href="/portfolio">Portfolio</a></li>
-      <li class="drop-btn"><a href="/resume">      Resume</a></li>
-      <li class="drop-btn"><a href="/contact">    Contact</a></li>
-      <!-- <li class="drop-btn"><a href="#">              Blog</a></li> -->
+      <!-- <li class="drop-btn"><a href="{% link index.html %}">    Home</a></li> -->
+      <li class="drop-btn"><a href="{% link blog.html %}">    Blog</a></li>
+      <li class="drop-btn"><a href="{% link portfolio.html %}">Portfolio</a></li>
+      <li class="drop-btn"><a href="{% link resume.html %}">      Resume</a></li>
+      <li class="drop-btn"><a href="{% link contact.html %}">    Contact</a></li>
     </ul>
-  </label>  
+  </label>

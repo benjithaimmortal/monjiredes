@@ -1,3 +1,7 @@
+---
+layout: base
+---
+
 <!doctype html>
 <html>
   <head>
@@ -44,7 +48,7 @@
     {% if page.preloads %}
       {% assign preloads = page.preloads | split: ", " %}
       {% for preload in preloads %}
-        <link rel="preload" as="image"  href="/assets/images/{{ preload }}">
+        <link rel="preload" as="image"  href="{{ site.baseurl }}/assets/images/{{ preload }}">
       {% endfor %}
     {% endif %}
     <!-- force mobile to use mobile viewport -->
