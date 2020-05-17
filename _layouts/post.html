@@ -1,0 +1,29 @@
+---
+layout: base
+---
+<div class="blog-post">
+  <article class="article">
+    <div class='blog-info'>
+      <div class='demos'>
+        {% if post %}
+          {% assign categories = post.categories %}
+        {% else %}
+          {% assign categories = page.categories %}
+        {% endif %}
+        {% for category in categories %}
+          <div class="cat" href="{{site.baseurl}}blog/categories/#{{category|slugize}}">{{category}}</div>
+          {% unless forloop.last %}, {% endunless %}
+        {% endfor %}
+        <div class='datetime'>{{ page.date | date_to_string }}</div>
+      </div>
+      <h1 class='title'>{{ page.title }}</h1>
+      {% if page.author %}
+        <div class='auth'>By {{ page.author }}</div>
+      {% endif %}
+    </div>
+    <section class='content'>
+      {{ content }}
+    </section>
+  </article>
+  <div class='hero' style="background-image: url({{ site.baseurl }}assets/images/{{ page.hero }})"></div>
+</div>
