@@ -1,10 +1,10 @@
 ---
 layout: base
-permalink: /blog/
 title: Blog
 ---
 <section class='all-posts'>
-  {% for post in site.posts %}
+  <!-- paginator.posts was previously site.posts -->
+  {% for post in paginator.posts %}
   <a href="{{ site.baseurl }}{{ post.url }}" class='card'>
     <div class='image' style="background-image: url({{ site.baseurl }}/assets/images/{{ post.hero }})"></div>
     <div class='info'>
