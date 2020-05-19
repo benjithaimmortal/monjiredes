@@ -106,11 +106,38 @@ strong {
 }
 
 
-@media (max-width: 500px) {
+@media (max-width: 900px) {
+  .contact .text-left {
+    font-size: 14px;
+    width: 330px;
+    margin-left: unset;
+  }
+}
+@media (max-width: 800px) {
+  .contact .image-right {
+    margin-right: -25px;
+    width: calc(100% - 300px);
+    // overflow: hidden;
+    img {
+      margin-right: -20px;
+    }
+  }
+  .contact-form-box {
+    width: calc(100% + 95px);
+    margin-left: -50px;
+    margin-right: -50px;
+  }
+}
+@media (max-width: 700px) {
+
+  .contact-form-box {
+    width: calc(100% + 76px);
+    margin-right: auto;
+  }
   .contact {
-    .pane { padding-top: 90px; }
+    // .pane { padding-top: 90px; }
     .text-left { font-size: 13px; }
-    .image-right { min-width: 300px; }
+    .image-right { min-width: 290px; }
     .contact-form-box h1 { font-size: 50px; text-align: center; }
   }
 }

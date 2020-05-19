@@ -21,7 +21,8 @@
     font-size: 14px;
     letter-spacing: 1.8px;
     color: #161616;
-    // &:last-of-type { margin-right: 20px; }
+    margin-right: -5px;
+    &:last-of-type { margin-right: unset; }
   }
   .datetime {
     display: inline;
@@ -51,6 +52,10 @@
     h1, h2, h3, h4, h5, h6 {
       margin-top: 30px;
     }
+    h4 {
+      font-size: 32px;
+      font-weight: 900;
+    }
     p {
       padding-bottom: 28px;
     }
@@ -61,6 +66,32 @@
     li {
       list-style: unset;
       list-style-position: inside;
+    }
+    dl {
+      padding-bottom: 28px;
+    }
+    dt {
+      color: $light-yellow;
+      font-weight: 700;
+    }
+    dd {
+      margin-left: 10px;
+      // font-style: italic;
+      padding-bottom: 5px;
+      &:before {
+        content: '';
+        display: inline-block;
+        height: 0;
+        border: solid transparent 5px;
+        border-left: solid $light-yellow 8px;
+        border-radius: 50%;
+        padding-right: 5px;
+      }
+    }
+    hr {
+      border: none;
+      border-top: dashed $cyan;
+      margin: 0 35px 15px 20px;
     }
     blockquote {
       border-left: solid 4px $light-yellow;
