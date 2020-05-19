@@ -95,18 +95,22 @@
       
     </div>
     <section class='content'>
-      <p>I used <code class="highlighter-rouge">paginate: 5</code> and 
-<code class="highlighter-rouge">paginate_path: "/blog/:num/"</code></p>
+      <p>I used the following code in <code class="highlighter-rouge">/config.yml</code>:</p>
 
-<p>I also learned that <code class="highlighter-rouge">index.html</code> becomes the slash on whatever its root. For example, <code class="highlighter-rouge">blog/index.html</code> is happily routed as <code class="highlighter-rouge">/blog/</code>!</p>
+<figure class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">paginate</span><span class="p">:</span> <span class="mi">5</span>
+<span class="nx">paginate_path</span><span class="p">:</span> <span class="dl">"</span><span class="s2">/blog/:num/</span><span class="dl">"</span></code></pre></figure>
 
-<p>oh dear, and this https://eduardoboucas.com/blog/2014/11/05/adding-ajax-pagination-to-jekyll.html</p>
+<p>I also learned that <code class="highlighter-rouge">index.html</code> becomes the slash on whatever its root. For example, <code class="highlighter-rouge">blog/index.html</code> is happily routed as <code class="highlighter-rouge">/blog/</code>! So don’t worry about</p>
+
+<p>Oh dear, and I’ll likely do <a href="https://eduardoboucas.com/blog/2014/11/05/adding-ajax-pagination-to-jekyll.html">this</a> next…</p>
 
 <p>The End.</p>
 
     </section>
   </article>
-  <div class='hero' style="background-image: url(/monjiredes/assets/images/pages.jpg)"></div>
+  <div class='outer-hero'>
+    <div class='hero' style="background-image: url(/monjiredes/assets/images/pages.jpg)"></div>
+  </div>
 </div>
       </div>
     </section>

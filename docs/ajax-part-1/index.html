@@ -98,10 +98,10 @@
       <p>I’m going to let you in on a secret superpower I have. With a small string of text, I can download any website in the world. OK, so maybe it’s not very super. It’s called an HTTP request and your browser does this all the time. But what if you could do it <em>yourself</em>? We call that AJAX.</p>
 
 <blockquote>
-  <p><strong>Disclaimer!</strong> <em>This article assumes a basic knowledge of HTTP REST structure. If you know what GET and POST mean, read on! Otherwise, I highly recommend going straight to the <a href="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods">Wikipedia source</a>.</em></p>
+  <p><strong>Disclaimer!</strong> <em>This article assumes a basic knowledge of HTTP’s structure. If you know the meaning of GET and POST, read on! Otherwise, I highly recommend going straight to the <a href="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods">Wikipedia source</a>.</em></p>
 </blockquote>
 
-<p>AJAX stands for <strong>A</strong>synchronous <strong>J</strong>avaScript <strong>a</strong>nd <strong>X</strong>ML. It was developed to call and return XML strings from a server. But it’s been widely adopted as a solution for getting things from other pages, or doing the things that your browser does independently of the standards to which it adheres.</p>
+<p>AJAX is <strong>A</strong>synchronous <strong>J</strong>avaScript <strong>a</strong>nd <strong>X</strong>ML. It was developed to call and return XML strings from a server, but it’s been widely adopted as a solution for getting things from other pages, or doing the things that your browser does independently of the standards to which it adheres.</p>
 
 <p>For example, let’s say we want to send a form. With HTML’s <code class="highlighter-rouge">&lt;form&gt;</code> element, I can tell the browser to send information via POST or GET request types through a very predictable and typical process:</p>
 <ol>
@@ -160,9 +160,17 @@
 <span class="p">});</span>
 </pre></td></tr></tbody></table></code></pre></figure>
 
+<h2 id="cool-so-now-what-about-that-jq">Cool, so now what about that JQ?</h2>
+
+<p>Yeah, so jQuery’s AJAX feels pretty simple. It’s just the HTTP <code class="highlighter-rouge">type</code>, the <code class="highlighter-rouge">url</code> we’re grabbing from, and a body of any data. Maybe you can encode it, or use HTTP headers if you’re getting really fancy.</p>
+
+<p>The original method is a bit more cumbersome. The <a href="https://caniuse.com/#feat=mdn-api_xmlhttprequest">universally supported</a> base method for AJAX is called <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/XMLHttpRequest"><code class="highlighter-rouge">XMLHttpRequest()</code></a>. It is so very much harder for AJAX newcomers to grasp. So I’m going to break it down for you in Part 2!</p>
+
     </section>
   </article>
-  <div class='hero' style="background-image: url(/monjiredes/assets/images/ajax-bottle.jpg)"></div>
+  <div class='outer-hero'>
+    <div class='hero' style="background-image: url(/monjiredes/assets/images/ajax-bottle.jpg)"></div>
+  </div>
 </div>
       </div>
     </section>

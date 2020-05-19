@@ -3,6 +3,7 @@
   flex-wrap: nowrap;
   article {
     width: 650px;
+    max-width: 100%;
     margin-right: auto;
     color: #161616;
     font-family: $serif-font;
@@ -39,14 +40,19 @@
     line-height: 1.3;
     letter-spacing: 1px;
   }
-  .hero {
+  .outer-hero { // because sometimes there's going to be an overflow :blushes:
     margin-right: -150px;
     width: calc(100% - 450px); // that's 650 + 50 margin - 150 of the right part of the grid
-    height: calc(100vh - 60px); // that's the height of the top
-    background: center / cover no-repeat;
-    opacity: .5;
-    transition: ease opacity .2s;
-    &:hover { opacity: 1; }
+    height: calc(100vh - 60px); // that's the height of the screen - top margin
+    background: $white;
+    .hero {
+      width: 100%;
+      height: 100%;
+      background: center / cover no-repeat;
+      opacity: .5;
+      transition: ease opacity .2s;
+      &:hover { opacity: 1; }
+    }
   }
   .content {
     h1, h2, h3, h4, h5, h6 {
@@ -112,6 +118,7 @@
     display: flex;
     flex-wrap: nowrap;
     align-items: stretch;
+    text-decoration: none !important;
     padding: 0 30px 60px;
   }
   .cats {
@@ -126,6 +133,7 @@
     // &:last-of-type { margin-right: 20px; }
   }
   .info {
+    max-width: 100%;
     margin-left: 20px;
     padding: 60px 0;
     h2 {
@@ -148,14 +156,46 @@
     .hero { margin-right: unset; }
   }
 }
+@media (max-width: 650px) {
+  .all-posts .card {
+    margin-left: -50px;
+    .image {
+      min-width: 130px;
+      max-width: 130px;
+    }
+  }
+}
+@media (max-width: 600px) {
+  .inner .all-posts p {
+    width: unset;
+  }
+}
+@media (max-width: 400px) {
+  .all-posts .card {
+    border: dashed 2px $cyan;
+    padding-bottom: unset;
+    margin-bottom: 20px;
+    margin-left: unset;
+    .image {
+      display: none;
+    }
+  }
+}
 
 
 /*
 highlighter
 */
-
+.highlighter-rouge {
+  font-family: monospace;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: -0.4px;
+  // color: #1a1a1a;
+  color: $dark-red;
+}
 .highlight {
-  font-family: mono;
+  font-family: monospace;
   font-size: 14px;
   letter-spacing: -0.4px;
   padding: 10px 20px;
@@ -164,6 +204,7 @@ highlighter
   overflow: auto;
   border-left: solid 4px $light-cyan;
   width: 110%;
+  margin-bottom: 28px;
 }
 .highlight .hll { background-color: #ffffcc }
 .highlight .c { color: #aaaaaa; font-style: italic } /* Comment */
